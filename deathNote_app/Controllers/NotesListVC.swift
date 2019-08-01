@@ -31,7 +31,7 @@ class NotesListVC: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createNewNoteSegue" {
-            let nextVC = segue.destination as! AddNoteViewController
+            let nextVC = segue.destination as! AddNoteVC
             nextVC.delegate = self
         }
     }

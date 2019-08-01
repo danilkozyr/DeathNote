@@ -112,7 +112,7 @@
         <!--New Death Note-->
         <scene sceneID="rMQ-Dz-2B6">
             <objects>
-                <viewController id="bhR-rK-Pel" customClass="AddNoteViewController" customModule="deathNote_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bhR-rK-Pel" customClass="AddNoteVC" customModule="deathNote_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GtV-EE-5xE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNoteViewController: UIViewController {
+class AddNoteVC: UIViewController {
 
     var delegate: AddNewDeathNoteDelegate?
     private let datePicker = UIDatePicker()
@@ -72,7 +72,7 @@ class AddNoteViewController: UIViewController {
         datePicker.locale = Locale(identifier: "en_GB")
         datePicker.minimumDate = Date()
         datePicker.datePickerMode = .dateAndTime
-        datePicker.addTarget(self, action: #selector(AddNoteViewController
+        datePicker.addTarget(self, action: #selector(AddNoteVC
             .datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
         
     }
@@ -106,13 +106,13 @@ class AddNoteViewController: UIViewController {
 }
 
 
-extension AddNoteViewController: UITextFieldDelegate {
+extension AddNoteVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return range.location < 30
     }
 }
 
-extension AddNoteViewController: UITextViewDelegate {
+extension AddNoteVC: UITextViewDelegate {
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         return range.location < 200

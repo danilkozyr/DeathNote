@@ -15,7 +15,7 @@
 		55C1B8A922CA6CB100906F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C1B8A722CA6CB100906F44 /* LaunchScreen.storyboard */; };
 		55C1B8B622CA71BA00906F44 /* DeathNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1B8B522CA71BA00906F44 /* DeathNote.swift */; };
 		55C1B8B922CA744900906F44 /* DeathNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1B8B822CA744900906F44 /* DeathNoteCell.swift */; };
-		55C1B8BB22CA821900906F44 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1B8BA22CA821900906F44 /* AddNoteViewController.swift */; };
+		55C1B8BB22CA821900906F44 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1B8BA22CA821900906F44 /* AddNoteVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		55C1B8AA22CA6CB100906F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C1B8B522CA71BA00906F44 /* DeathNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathNote.swift; sourceTree = "<group>"; };
 		55C1B8B822CA744900906F44 /* DeathNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathNoteCell.swift; sourceTree = "<group>"; };
-		55C1B8BA22CA821900906F44 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		55C1B8BA22CA821900906F44 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				55C1B8A022CA6CB000906F44 /* NotesListVC.swift */,
-				55C1B8BA22CA821900906F44 /* AddNoteViewController.swift */,
+				55C1B8BA22CA821900906F44 /* AddNoteVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 				55C1B8A122CA6CB000906F44 /* NotesListVC.swift in Sources */,
 				55C1B89F22CA6CB000906F44 /* AppDelegate.swift in Sources */,
 				55C1B8B922CA744900906F44 /* DeathNoteCell.swift in Sources */,
-				55C1B8BB22CA821900906F44 /* AddNoteViewController.swift in Sources */,
+				55C1B8BB22CA821900906F44 /* AddNoteVC.swift in Sources */,
 				55C1B8B622CA71BA00906F44 /* DeathNote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
