@@ -18,23 +18,23 @@ class AddNoteViewController: UIViewController {
         return formatter
     }
     
-    @IBOutlet weak var descriptionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var nameField: UITextField! {
+    @IBOutlet private weak var descriptionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var nameField: UITextField! {
         didSet {
             nameField.delegate = self
         }
     }
-    @IBOutlet weak var descriptionView: UITextView! {
+    @IBOutlet private weak var descriptionView: UITextView! {
         didSet {
             descriptionView.delegate = self
         }
     }
-    @IBOutlet weak var dateField: UITextField! {
+    @IBOutlet private weak var dateField: UITextField! {
         didSet {
             dateField.inputView = datePicker
         }
     }
-    @IBAction func onTouchDoneButton(_ sender: UIBarButtonItem) {
+    @IBAction private func onTouchDoneButton(_ sender: UIBarButtonItem) {
         guard let name = nameField.text, !name.isEmpty else {
             showAlert(title: "Error", message: "Fill Name Field")
             return
@@ -97,7 +97,7 @@ class AddNoteViewController: UIViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let actionOk = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
-            print("yo" )
+            self.dismiss(animated: true)
         }
         alert.addAction(actionOk)
         present(alert, animated: true, completion: nil)

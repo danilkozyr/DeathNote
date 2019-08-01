@@ -70,8 +70,7 @@
 		55C1B89D22CA6CB000906F44 /* deathNote_app */ = {
 			isa = PBXGroup;
 			children = (
-				55C1B8B722CA743100906F44 /* Cell */,
-				55C1B8B422CA71AA00906F44 /* Classes */,
+				55C1B8B422CA71AA00906F44 /* Model */,
 				55C1B8B022CA6D3F00906F44 /* Controllers */,
 				5525A0ED22CB768E0082B9AE /* Protocols */,
 				55C1B8B222CA6D6A00906F44 /* SupportingFiles */,
@@ -94,6 +93,7 @@
 		55C1B8B122CA6D5700906F44 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55C1B8B722CA743100906F44 /* Cell */,
 				55C1B8A222CA6CB000906F44 /* Main.storyboard */,
 			);
 			path = View;
@@ -108,12 +108,12 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		55C1B8B422CA71AA00906F44 /* Classes */ = {
+		55C1B8B422CA71AA00906F44 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				55C1B8B522CA71BA00906F44 /* DeathNote.swift */,
 			);
-			path = Classes;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		55C1B8B722CA743100906F44 /* Cell */ = {
