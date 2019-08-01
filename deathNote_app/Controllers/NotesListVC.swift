@@ -15,7 +15,7 @@ private func createList() {
     notes.append(DeathNote(name: "James Bond", description: "A lot of movies with him, A lot of movies with him, A lot of movies with him", time: "12 Jul 2039 15:53"))
 }
 
-class TableViewController: UIViewController {
+class NotesListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -25,6 +25,7 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         createList()
     }
 
@@ -37,7 +38,7 @@ class TableViewController: UIViewController {
     
 }
 
-extension TableViewController: UITableViewDataSource {
+extension NotesListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "deathNoteCellIdentifier") as! DeathNoteCell
         let note = notes[indexPath.row]
@@ -59,7 +60,7 @@ extension TableViewController: UITableViewDataSource {
 
 }
 
-extension TableViewController: AddNewDeathNoteDelegate {
+extension NotesListVC: AddNewDeathNoteDelegate {
     func onCreatedNew(note: DeathNote) {
         notes.append(note)
         tableView.reloadData()
