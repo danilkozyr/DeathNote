@@ -8,14 +8,9 @@
 
 import UIKit
 
-
-private var notes: [DeathNote] = [DeathNote]()
-
-private func createList() {
-    notes.append(DeathNote(name: "James Bond", description: "A lot of movies with him, A lot of movies with him, A lot of movies with him", time: "12 Jul 2039 15:53"))
-}
-
 class NotesListVC: UIViewController {
+
+    private var notes: [DeathNote] = [DeathNote]()
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -26,7 +21,12 @@ class NotesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        createList()
+        initializeNote()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +36,12 @@ class NotesListVC: UIViewController {
         }
     }
     
+    private func initializeNote() {
+        notes.append(DeathNote(name: "James Bond",
+                               description: "A lot of movies with him, A lot of movies with him, A lot of movies with him",
+                               time: "12 Jul 2039 15:53"))
+    }
+
 }
 
 extension NotesListVC: UITableViewDataSource {
@@ -53,9 +59,15 @@ extension NotesListVC: UITableViewDataSource {
         return notes.count
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            notes.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
     }
 
 }

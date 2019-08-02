@@ -12,4 +12,6 @@ struct DeathNote {
     var name: String
     var description: String?
     var time: String
+    
+    
 }
