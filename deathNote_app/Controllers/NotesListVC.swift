@@ -37,9 +37,23 @@ class NotesListVC: UIViewController {
     }
     
     private func initializeNote() {
-        notes.append(DeathNote(name: "James Bond",
-                               description: "A lot of movies with him, A lot of movies with him, A lot of movies with him",
+        notes.append(DeathNote(name: "Kurt Cobain",
+                               description: "I don’t have the passion anymore, and so remember, it’s better to burn out than to fade away.",
                                time: "12 Jul 2039 15:53"))
+        notes.append(DeathNote(name: "Jiah Khan",
+                               description: "I don’t know why destiny brought us together. After all the pain, the rape, the abuse, the torture I have seen previously I didn’t deserve this.",
+                               time: "23 Jun 2049 12:13"))
+        notes.append(DeathNote(name: "Vincent Van Gogh",
+                               description: "The sadness will last forever.",
+                               time: "28 Feb 2033 02:23"))
+        notes.append(DeathNote(name: "Marilyn Monroe",
+                               description: "I sound crazy, but I think I’m going crazy. I get before a camera and my concentration and everything I’m trying to learn leaves me. Then I feel like I’m not existing in the human race at all.",
+                               time: "01 Jun 2020 22:00"))
+        notes.append(DeathNote(name: "Robin Williams",
+                               description: "I’m done with that. Time to go. No more to come.”",
+                               time: "01 Jun 2020 22:00"))
+        
+        
     }
 
 }
