@@ -13,5 +13,5 @@ DeathNote is a manga in which Light Yagami is the owner of a notebook of death. 
 
 ### Demonstration
 <p align="center">
-<img src="demo.gif" height=600>
+<img src="https://github.com/danilkozyr/iOS-Portfolio/raw/master/gifs/deathNote.gif" height=600>
 </p>
